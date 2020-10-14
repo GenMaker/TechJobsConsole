@@ -122,7 +122,7 @@ namespace TechJobsConsole
             //TODO add 0 jobs/ results handler
             if (someJobs.Count == 0)
             {
-                Console.Write("There are no jobs that fit your search perameters.");
+                Console.WriteLine("There are no jobs that fit your search perameters.");
             } else { 
                 // list of Jobs and each is a dictionary
                 foreach (var job in someJobs)
