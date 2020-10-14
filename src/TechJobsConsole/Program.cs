@@ -119,16 +119,21 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-
-            // list of Jobs and each is a dictionary
-            foreach (var job in someJobs)
+            //TODO add 0 jobs/ results handler
+            if (someJobs.Count == 0)
             {
-                Console.WriteLine("*****");
-                foreach (var key in job.Keys)
+                Console.Write("There are no jobs that fit your search perameters.");
+            } else { 
+                // list of Jobs and each is a dictionary
+                foreach (var job in someJobs)
                 {
-                    Console.WriteLine ($"{key}: {job[key]}");
+                    Console.WriteLine("*****");
+                    foreach (var key in job.Keys)
+                    {
+                        Console.WriteLine($"{key}: {job[key]}");
+                    }
+
                 }
-                
             }
             
         }
